@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+				a{
+					font-size:20px
+				}
+			   .bk{
+			   		position: absolute;      /*绝对定位*/ 
+			   		top: 50%;                  /* 距顶部50%*/   
+					left: 50%;                  /* 距左边50%*/   
+			   		text-decoration: none;
+			   		background-color: #FF9797;
+			   		color: #FFF;
+			   		/*给出宽高*/
+			   		height: 400px;  margin-top: -200px;   /*margin-top为height一半的负值*/   
+					width: 400px;  margin-left: -200px;    /*margin-left为width一半的负值*/  
+			   		text-align: center;
+			   		line-height: 400px;
+			   }
+			   body{ background:#00FFFF;}  /*设置颜色为白色*/
+			  .xrf{
+					color: #87CEEB;
+					font-size: 0.9em;
+				}
+			  .xrf:hover{
+					color: #C9BD81;
+					cursor: pointer;
+				}
+			  .gd{
+					transition: all 0.5s;
+				}
+			.xrfl{
+				position: absolute;
+				top: 50%;                  /* 距顶部50%*/   
+				left: 40%;                  /* 距左边50%*/  
+				width: 400px;
+				height: 70px;
+				background-color: #fff;
+				border-radius: 50px;
+				text-align: center;
+				line-height: 70px;
+				box-shadow: 7px 10px 15px 0px #838B8B ;
+				/*border: 1px solid rgb(0,0,0);*/
+			}
+			.xrfl:hover{
+				background-color: #000;
+				cursor: pointer;
+			}
+			
+		</style>
+		<!--<link rel="stylesheet" type="text/css" href="css/body.css"/>-->
+	</head>
+	<body>
+		
+		<!--<div class="bk">-->
+			<div class="xrfl gd">
+                {% csrf_token %}   <!--加入这行 -->
+				<a href="entrance/" class="xrf gd" style="font-size:30px;text-decoration:none;">欢迎进入接口自动化</a>
+			</div>
+		<!--</div>-->
+	</body>
+</html>
+<!--href="#" style="color: #70DB93 ;font-weight: bold;"-->

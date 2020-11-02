@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+        <style type="text/css">
+           body{ background:#FFE4C4;}  /*设置颜色为白色*/
+
+        </style>
+	</head>
+	<body>
+        <div>
+            <form action="receive_file/" method="post" enctype="multipart/form-data">
+                {% csrf_token %}   <!--加入这行 -->
+                <input type="file" name="test_case" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"/>
+                <p></p>
+                <input type="submit" value="提交" />
+            </form>
+        </div>
+        <div>
+            <form action="instructions/" method="post">
+                {% csrf_token %}   <!--加入这行 -->
+                <input type="submit" value="使用说明"/>
+            </form>
+        </div>
+        <div>
+            <form action="test_test_case/" method="post">
+                {% csrf_token %}   <!--加入这行 -->
+                <input type="submit" value="测试文件"/>
+            </form>
+        </div>
+	</body>
+</html>
